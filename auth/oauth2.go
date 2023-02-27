@@ -9,9 +9,9 @@ var GoogleOauthConfig *oauth2.Config
 
 func init() {
 	GoogleOauthConfig = &oauth2.Config{
-		RedirectURL:  "http://localhost:8080/auth/google/callback",
+		RedirectURL:  "https://magang.up.railway.app/auth/google/callback",
 		ClientID:     "1088941664415-jf8agui0m00h84kqgcv42i9npfg821cm.apps.googleusercontent.com",
-		ClientSecret: "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",
+		ClientSecret: "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",
 		Scopes: []string{
 			"https://www.googleapis.com/auth/userinfo.email",
 			"https://www.googleapis.com/auth/userinfo.profile",

@@ -78,9 +78,9 @@ func main() {
 	r.Get("/error", handlers.handleErrorPage)
 	r.Get("/logout", handlers.handleLogout)
 
-	serverPort := GetEnv("PORT", ":8080")
+	serverPort := GetEnv("PORT", "8080")
 	fmt.Println("Server started on port", serverPort)
-	log.Fatal(http.ListenAndServe(serverPort, r))
+	log.Fatal(http.ListenAndServe(":" + serverPort, r))
 }
 
 var views = map[string]*template.Template{

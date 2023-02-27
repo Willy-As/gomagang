@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/public/style.css" rel="stylesheet" />
+        <link href="/public/custom.css" rel="stylesheet" />
+        <title>Profile</title>
+    </head>
+
+    <body class="flex gap-x-2">
+        <div class="max-w-4xl w-full mx-auto p-2 sm:p-4">
+            <h2 class="mb-4 text-xl font-bold leading-tight">
+                # Siswa dan Mahasiswa Magang
+            </h2>
+            <div class="overflow-x-auto mt-12">
+                <table class="min-w-full text-xs">
+                    <colgroup>
+                        <col class="w-60" />
+                        <col class="w-52" />
+                        <col class="w-52" />
+                        <col class="w-52" />
+                    </colgroup>
+                    <thead class="">
+                        <tr class="text-left">
+                            <th class="p-3">Nama</th>
+                            <th class="p-3">Email</th>
+                            <th class="p-3">No HP</th>
+                            <th class="p-3">Divisi</th>
+                            <th class="p-3">Jenis Kelamin</th>
+                            <th class="p-3">Tanggal Mulai</th>
+                            <th class="p-3">Tanggal Selesai</th>
+                            <th class="p-3">Sekolah / Universitas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {{range $index, $element := .Interns}}
+                            <tr class="border-b border-opacity-20 dark:border-gray-700">
+                                <td class="p-3">
+                                    <p>{{$element.FullName}}</p>
+                                </td>
+                                <td class="p-3">
+                                    <p>{{$element.Email}}</p>
+                                </td>
+                                <td class="p-3">
+                                    <p>{{$element.PhoneNumber}}</p>
+                                </td>
+                                <td class="p-3">
+                                    <p>{{$element.Division}}</p>
+                                </td>
+                                <td class="p-3">
+                                    <p>{{$element.Gender}}</p>
+                                </td>
+                                <td class="p-3">
+                                    <p>{{$element.StartDate}}</p>
+                                </td>
+                                <td class="p-3">
+                                    <p>{{$element.EndDate}}</p>
+                                </td>
+                                <td class="p-3">
+                                    <p>{{$element.School}}</p>
+                                </td>
+                            </tr>
+                        {{end}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

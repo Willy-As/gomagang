@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/public/style.css" rel="stylesheet" />
+        <link href="/public/custom.css" rel="stylesheet" />
+        <title>Login</title>
+    </head>
+    <body
+        class="w-full max-w-md flex mx-auto items-center bg-gray-200 justify-center min-h-screen"
+    >
+    <section
+    id="login"
+    class="flex w-full items-center flex-col justify-center gap-y-5"
+>
+            <form
+                action="/admin/login"
+                method="POST"
+                class="space-y-4 bg-white/80 shadow-xl p-8 w-full rounded-xl"
+            >
+            <img src="/public/logo.png" class="w-24 mx-auto" alt="">
+                <div class="flex flex-col gap-y-2">
+                <div class="flex flex-col gap-y-2">
+                    <span class="font-medium text-gray-600">Email</span>
+                    <input
+                        type="email"
+                        name="email"
+                        autofocus="true"
+                        placeholder="admin@gmail.com"
+                        required
+                        class="w-full py-2 form-input border-gray-300 rounded-md border"
+                    />
+                </div>
+                <div class="flex flex-col gap-y-2">
+                    <span class="font-medium text-gray-600">Password</span>
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="********"
+                        required
+                        class="w-full py-2 form-input border-gray-300 rounded-md border"
+                    />
+                </div>
+                <button
+                    type="submit"
+                    class="bg-[#4F46E5] hover:bg-[#4F46D1] w-full font-semibold text-white rounded-lg p-3"
+                >
+                    Masuk
+                </button>
+                   <div class="flex my-3 items-center justify-center">
+                    <div class="border-b border-black/50 w-1/5 md:w-1/4"></div>
+                    <div
+                        class="px-2 text-gray-500 font-medium text-xs"
+                    >
+                        Untuk anak magang
+                    </div>
+                    <div class="border-b border-black/50 w-1/5 md:w-1/4"></div>
+                </div>
+
+                <a
+                    href="/auth/google/login"
+                    class="w-full py-2 hover:bg-yellow-50 hover:cursor-pointer gap-x-2 font-thin text-gray-700/80 flex items-center justify-center form-input border-gray-300 rounded-md border"
+                >
+                    <img
+                        src="https://developers.google.com/static/identity/images/g-logo.png"
+                        class="w-6 h-6"
+                    />
+                    Masuk dengan akun Google
+                </a>
+            </form>
+        </section>
+    </body>
+</html>

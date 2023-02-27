@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/public/style.css" rel="stylesheet" />
+        <link href="/public/custom.css" rel="stylesheet" />
+        <title>Lengkapi Data Diri Anda</title>
+    </head>
+    <body
+        class="w-full max-w-xl flex flex-col mx-auto items-center bg-gray-200 justify-center min-h-screen"
+    >
+        <section class="p-3 bg-white/80 shadow-xl rounded-xl">
+            <div
+                class="p-3 m-3 rounded-xl gap-y-4 flex flex-col items-center justify-evenly"
+            >
+                <img
+                    src="{{ .Picture }}"
+                    alt="profile image"
+                    class="object-cover outline-double shadow-lg shadow-green-500/40 rounded-full object-center w-24 h-24"
+                />
+
+                <div class="flex flex-col items-center">
+                    <h2 class="text-xl font-semibold">{{ .Name }}</h2>
+                    <span class="text-gray-500 text-xs"
+                        >{{ .Email }}</span
+                    >
+                </div>
+            </div>
+
+            <form method="post" action="/complete-personal-data" class="mx-4 mt-5">
+                <div class="flex gap-x-2">
+                    <input
+                        required
+                        type="text"
+                        autofocus="true"
+                        name="full-name"
+                        class="block w-full h-10 pr-10 mt-2 text-sm text-gray-700 border border-gray-200 focus:outline-none rounded shadow-sm focus:border-blue-500 form-input"
+                        placeholder="Nama Lengkap"
+                    />
+                </div>
+                <input
+                    required
+                    type="text"
+                    name="school"
+                    class="block w-full h-10 pr-10 mt-2 text-sm text-gray-700 border border-gray-200 focus:outline-none rounded shadow-sm focus:border-blue-500 form-input"
+                    placeholder="Nama Universitas / Sekolah "
+                />
+                <input
+                    required
+                    type="text"
+                    name="phone-number"
+                    class="w-full h-10 px-3 mt-2 text-sm text-gray-700 border border-gray-200 shadow-sm focus:outline-none focus:border-blue-500"
+                    placeholder="Nomor HP"
+                />
+                <input
+                    required
+                    type="text"
+                    name="division"
+                    class="w-full h-10 px-3 mt-2 text-sm text-gray-700 border border-gray-200 shadow-sm focus:outline-none focus:border-blue-500"
+                    placeholder="Ditempatkan di Divisi"
+                />
+                <div
+                    class="flex items-center justify-evenly  mt-5"
+                >
+                    <div
+                        class="flex flex-col justify-evenly ml-1 text-xs text-gray-500"
+                    >
+                        <span>Tanggal Mulai</span>
+                        <input
+                            type="date"
+                            name="start-date"
+                            class="w-full h-10 px-3 mt-2 text-sm text-gray-700 border border-gray-200 shadow-sm focus:outline-none focus:border-blue-500 form-input"
+                        />
+                    </div>
+                    <div class="flex flex-col ml-1 text-xs text-gray-500">
+                        <span>Tanggal Selesai</span>
+                        <input
+                            name="end-date"
+                            type="date"
+                            class="w-full h-10 px-3 mt-2 text-sm text-gray-700 border border-gray-200 shadow-sm focus:outline-none focus:border-blue-500 form-input"
+                        />
+                    </div>
+
+                    <div class="flex text-xs text-gray-500 gap-y-2 flex-col">
+                        <span>Jenis Kelamin</span>
+                        <label class="inline-flex items-center">
+                            <input
+                                type="radio"
+                                class="form-radio"
+                                name="gender"
+                                value="Laki-Laki"
+                                defaultChecked
+                            />
+                            <span class="ml-2 text-xs">Laki-Laki</span>
+                        </label>
+                        <label class="inline-flex items-center">
+                            <input
+                                type="radio"
+                                class="form-radio"
+                                name="gender"
+                                value="Perempuan"
+                            />
+                            <span class="ml-2 text-xs">Perempuan</span>
+                        </label>
+                    </div>
+                </div>
+                <button
+                    type="submit"
+                    class="mt-5 bg-[#4F46E5] hover:bg-[#4F46D1] w-full font-semibold text-white rounded-lg p-3"
+                >
+                    Simpan
+                </button>
+            </form>
+        </section>
+    </body>
+</html>

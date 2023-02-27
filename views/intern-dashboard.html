@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="/public/style.css" rel="stylesheet" />
+        <link href="/public/custom.css" rel="stylesheet" />
+        <title>Profile</title>
+    </head>
+    <body
+        class="flex items-center justify-center min-h-screen flex-col gap-x-2"
+    >
+        <div
+            class="max-w-md p-8 flex flex-col items-center justify-center text-gray-500 mx-auto mt-5 rounded-xl shadow-2xl shadow-slate-500/60"
+        >
+            <div class="flex-shrink-0 w-full mb-6 h-44 sm:h-32 sm:w-32 sm:mb-0">
+                <img
+                    src="{{ .Picture }}"
+                    alt=""
+                    class="object-cover object-center shadow-2xl outline-dashed w-28 h-28 rounded-full bg-gray-500"
+                />
+            </div>
+
+            <div class="flex flex-col items-center text-center space-y-4">
+                <div>
+                    <h2 class="text-2xl text-black font-semibold">
+                        {{ .FullName }}
+                    </h2>
+                    <div class="text-base text-gray-500">Anak Magang</div>
+                    <div class="text-slate-900 text-xs">
+                        {{ .StartDate }} s.d {{ .EndDate }}
+                    </div>
+                </div>
+                <div class="space-y-1">
+                    <span class="flex items-center space-x-2">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                            aria-label="Email address"
+                            class="w-4 h-4 text-black fill-current"
+                            fill="currentColor"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M274.6,25.623a32.006,32.006,0,0,0-37.2,0L16,183.766V496H496V183.766ZM464,402.693,339.97,322.96,464,226.492ZM256,51.662,454.429,193.4,311.434,304.615,256,268.979l-55.434,35.636L57.571,193.4ZM48,226.492,172.03,322.96,48,402.693ZM464,464H48V440.735L256,307.021,464,440.735Z"
+                            ></path>
+                        </svg>
+                        <span class="text-gray-500 text-sm"
+                            >{{ .Email }}</span
+                        >
+                    </span>
+                    <span class="flex items-center space-x-2">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 512 512"
+                            class="w-4 h-4 text-black fill-current"
+                            fill="currentColor"
+                            aria-label="Phonenumber"
+                        >
+                            <path
+                                fill="currentColor"
+                                d="M449.366,89.648l-.685-.428L362.088,46.559,268.625,171.176l43,57.337a88.529,88.529,0,0,1-83.115,83.114l-57.336-43L46.558,362.088l42.306,85.869.356.725.429.684a25.085,25.085,0,0,0,21.393,11.857h22.344A327.836,327.836,0,0,0,461.222,133.386V111.041A25.084,25.084,0,0,0,449.366,89.648Zm-20.144,43.738c0,163.125-132.712,295.837-295.836,295.837h-18.08L87,371.76l84.18-63.135,46.867,35.149h5.333a120.535,120.535,0,0,0,120.4-120.4v-5.333l-35.149-46.866L371.759,87l57.463,28.311Z"
+                            ></path>
+                        </svg>
+                        <span class="text-gray-500 text-sm"
+                            >{{ .PhoneNumber }}</span
+                        >
+                    </span>
+                    <span class="flex items-center space-x-2">
+                        <svg
+                            role="img"
+                            viewBox="0 0 24 24"
+                            class="w-4 h-4"
+                            fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <title>Google Scholar</title>
+                            <path
+                                d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"
+                            />
+                        </svg>
+                        <span class="text-gray-500 text-sm"
+                            >{{ .School }}</span
+                        >
+                    </span>
+                    <span class="flex items-center space-x-2">
+                        <svg
+                            role="img"
+                            viewBox="0 0 24 24"
+                            class="w-4 h-4"
+                            fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <title>SparkPost</title>
+                            <path
+                                d="M16.2 9c-1.351.9-1.8 2.7-1.65 3.9-2.25-2.25 3.45-8.55-3-12.9C15.15 5.4 6 9.75 6 17.4c0 3 1.95 5.701 6 6.6 4.05-.898 6-3.6 6-6.6 0-4.5-2.7-6-1.8-8.4zM12 20.852c-1.8 0-3.45-1.5-3.45-3.451 0-1.801 1.5-3.45 3.45-3.45 1.8 0 3.45 1.5 3.45 3.45-.15 1.951-1.65 3.451-3.45 3.451z"
+                            />
+                        </svg>
+                        <span class="text-gray-500 text-sm">{{ .Division }}</span>
+                    </span>
+                    <span class="flex items-center space-x-2">
+                        <svg
+                            role="img"
+                            viewBox="0 0 24 24"
+                            class="w-4 h-4"
+                            fill="currentColor"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <title>Opsgenie</title>
+                            <path
+                                d="M12.002 0a5.988 5.988 0 1 1 0 11.975 5.988 5.988 0 0 1 0-11.975zm9.723 13.026h-.03l-4.527-2.242a.671.671 0 0 0-.876.268 22.408 22.408 0 0 1-4.306 5.217 22.407 22.407 0 0 1-4.286-5.2.671.671 0 0 0-.876-.269l-4.535 2.226h-.03a.671.671 0 0 0-.248.902 28.85 28.85 0 0 0 4.55 5.933l-.002.001c.024.025.05.048.075.072.335.335.676.664 1.027.981.081.074.165.144.247.217.315.278.632.555.96.82.144.117.295.227.441.341.277.216.552.434.837.639.44.318.888.625 1.346.917a.963.963 0 0 0 1.007.017c.487-.312.962-.64 1.428-.98.068-.05.132-.103.2-.153.358-.266.713-.537 1.06-.82.234-.19.46-.39.688-.588.17-.147.34-.291.506-.442.295-.268.58-.545.864-.825.061-.06.127-.118.188-.179l-.004-.002a28.852 28.852 0 0 0 4.565-5.949.671.671 0 0 0-.269-.902z"
+                            />
+                        </svg>
+                        <span class="text-gray-500 text-sm">{{ .Gender }}</span>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

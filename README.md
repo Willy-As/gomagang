@@ -1,0 +1,1 @@
+gomagang.github.io
